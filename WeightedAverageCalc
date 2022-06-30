@@ -1,0 +1,97 @@
+#Zachary Griffith
+#weightedAverage.py
+
+##Purpose: Take input from text file with grades and weights, average,
+##and place in an organized text file.
+##Instruction Scenario:
+##A professor at Hardtack University has an unusual method of grading.
+##The students may or may not all take the same number of tests.
+##The individual tests are weighted, and these weights are used to compute
+##the student's average.
+##Important: the weights for all of the tests for a given student must add to 100. Assuming that w1 ... wn are the weights, and g1 ... gn are the grades, the average is computed by the formula:
+
+##Input:
+##Text file: grades.txt.
+##Input algorithm to find average:
+##((w1 * g1) + (w2 * g2) + ... + (wn * gn)) / 100
+
+
+##Output: In text file FirstnameLastnameAve.txt
+##Example:
+##Billy Bother's average: 87.0
+#Oh No’s average: Error: The weights are less than 100.
+#Hermione Heffalump's average: 95.4
+#Too Bad’s average: Error: The weights are more than 100.
+#Kurt Kidd's average: 82.5
+#Class average: 88.3
+
+#Certification of Authenticity:
+#I certify that this lab is entirely my own work.
+
+
+
+
+#Program weighted Average(inFileName, outFileName).
+def weightedAverage(inFileName, outFileName):
+    #Open and read from input file.
+    inputFileName = open(inFileName, "r")
+    #Open and write to output file.
+    outputFileName = open(outFileName, "w")
+    #print(inputFileName)
+    
+    #Read input file line by line.
+    readInFileName = inputFileName.read()
+    #print(readInFileName)
+    
+    #Split read file on the line break character.
+    getGrades = readInFileName.split("\n")
+    print(getGrades)
+    #Make an empty list for variable "grades".
+    #grades = []
+
+    #For grades in range of the length of getGrades (5).
+    for grades in range(-1,len(getGrades)):
+##        #grades = getgrades[index grades]
+        grades = getGrades[grades]
+        print(grades)
+        
+        listGrades = list(grades)
+        listGrades = listGrades[:len(grades)]
+        print()
+        print(listGrades)
+##        for listGrades in range(len(getGrades)):
+##            print(listGrades)
+        #grades.split("\n")
+        #print(grades)
+        #greadesNumList = the string of grades
+        #gradesNumList = list(grades)
+        #gradesNumList.split(" ")
+        #print(gradesNumList)
+
+
+        ##((w1 * g1) + (w2 * g2) + ... + (wn * gn)) / 100
+        
+
+
+        
+    #Write to output file.
+    #print(gradesNumList, file = outputFileName)
+
+    #Closint input and output text files.
+##inputFileName.close()
+##outputFileName.close()
+
+        
+
+
+#Set up the main(): function.
+def main():
+    #Parameter inFileName = text file grades.txt
+    inFileName = "grades.txt"
+    #Parameter outFileName = text file FirstnameLastnameAve.txt
+    outFileName = "ZacharyGriffithAvg.txt"
+    #run Function weightedAverage(inFileName, outFileName)
+    weightedAverage(inFileName, outFileName)
+#Automatically run main upon opening.
+main()
+
