@@ -1,0 +1,81 @@
+import math
+
+#Zachary Griffith
+#Mean.py
+
+#Purpose: The purpose of this program is to calculate a the mean, RMS, and standard deviation.
+
+#Inputs: Number of numbers to be entered. Number entered.
+#Outputs: Mean, RMS, Standard deviation calculations.
+
+#For this program to work:
+#To find mean add numbers / numOfNumbers
+#To find the RMS average there's 4 steps.
+#1. List your range of numbers
+#2. square each number you input
+#3.Take the number of numbers you inputed (Ex:4)
+#4.Divide that number by the number of numbers.
+#5. This should give you the root-mean-average.
+#Visualized example: 10**2+5**2+2**2+5**2
+#100+25+4+25 = 154 = 154/4 = 38.5**0.5 = 6.2048368229954285
+
+#Certification of Authenticity:
+#I certify that this lab is entirely my own work.
+
+def main():
+    #Pupose statement printed.
+    print("This program calculates means.")
+    
+    #Entering the number of numbers you are trying to find the mean of
+    numberOfNum = eval(input("How many number will you enter:"))
+
+    #Entering the numbers you'll be using
+    #x = eval(input("Enter the numbers for your mean:"))
+    
+    #The total is the sum of the range of numbers divided by the numberof numbers.
+    total1=0
+
+##Not Working correctly
+    x = 0
+    i = 0
+    for i in range(numberOfNum):
+        x = eval(input("Enter the numbers for your mean:"))
+        #print(x)
+        i =+ x
+        #print(i)
+    #print(i)
+
+    #Getting error int is not iterable?
+    #total = sum(x)
+    total = x
+    total1 = total1 * i
+    total2 = x**x
+    total3 = total2 / numberOfNum
+    total4 = math.sqrt(total3)
+    print("The mean is:", total4)
+        
+    #Finding the RMS average value.
+    #Getting error int is not iterable?
+    #total = sum(x)
+    total2 = total**2
+    total3 = numberOfNum
+    total4= math.sqrt(total2/numberOfNum)
+
+    #Printing RootMean
+    print("The RMS average is:", total4)
+
+    #Finding standard deviation
+    numerator1 = total4
+    denomenator1 = numberOfNum
+    stepOne = numerator1/denomenator1
+    for ans in range(numberOfNums):
+        stepTwo = x - stepOne
+        stepThree = stepTwo**2
+        stepFour = stepThree + total4
+    numerator2 = (1/numberOfNum)
+    denomenator2 = stepFour
+    standardDeviation = numberator2 / denomenator2
+    print("The standard deviation is:", standardDeviation)
+    
+    
+main()
