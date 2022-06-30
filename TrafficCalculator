@@ -1,0 +1,72 @@
+import math
+#Name: Zachary Griffith
+#Traffic.py
+
+#Problem/Purpose: Ask for the number of roads surveyed and,
+#for each road, the number of days that the counters were installed.
+#It should calculate and output the average number of vehicles
+#traveled down each road per day as well as the total number of vehicles
+#and the average number of vehicles for all of the roads.
+
+
+#The inputs of this program are: Numbers of roads surveyed.
+#How long to roads were suveryed.
+
+#The outputs of this program are: Idividual road averages.
+#Total number of cars per road.
+#Average cars per road.
+
+#Certification of Authenticity:
+#I certify that this lab is entirely my own work.
+
+#Naming program call.
+def traffic():
+    #Stating the purpose in a simplier form when ran.
+    print("This calculator averages road surverys,")
+    print("gives you the total number of cars surveryed,")
+    print("and the average number of vehicles per road.")
+    #Enter how many roads were suveryed.
+    roadsSurveyed = eval(input("How many roads were surveyed total: "))
+
+    #Gloabal variables.
+    roadAverage = 0
+    totalOverallCars = 0
+    surveyDays = 0
+    averageCarPerRoad = 0
+    
+    #Loop surveyDays for the number of roadsSurveryed.
+    for surveyDays in range(roadsSurveyed):
+        
+        #Enter the numbers of days each road was surveyed.
+        surveyDays = eval(input("How many days was this road surveyed: "))
+        
+        #Reset variable roadAverage1(carsPerDay total) to zero every loop.
+        roadAverage1 = 0
+
+        #Loop for averaging ech road individually.
+        for roadAverage in range(surveyDays):
+            
+            #Enter the number of cars per day.
+            carsPerDay = eval(input("How many cars traveled on this road on this day: "))
+            
+            #Finding the average per road
+            roadAverage1 = roadAverage1 + carsPerDay
+            roadAverage2 = surveyDays
+            roadAverageCalculated = roadAverage1 / roadAverage2
+            
+        #Print the average of cars per day / total time surveyed.
+        print(" This road had an average of", roadAverageCalculated, "vehicles per day.")
+
+        #Finding the total number of overall cars.
+        totalOverallCars = totalOverallCars + roadAverage1
+        
+        #Find the average number of cars per road.
+        averageCarPerRoad = totalOverallCars / roadsSurveyed        
+        
+        
+    #Printing the total number of overall cars.
+    print("The number of vehicles travels on all roads: ", totalOverallCars)
+    #Printing the average number of cars per road
+    print("The average number of vehicles per road is: ", averageCarPerRoad)
+
+traffic()
