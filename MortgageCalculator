@@ -1,0 +1,23 @@
+#Zach Griffith
+
+def main():
+    print("Calculating your loan:")
+    loan = eval(input("Enter Loan Amount: "))
+    #Select the time from of the loan in months.
+    months = eval(input("Enter Number of Months: "))
+    #Select the interest rate percentage, print("Interest Rate")
+    interest = eval(input("Enter the rate of interest: "))
+    #Make interest input a decimal(example 5.3 into .053) for calculations
+    rate = (interest / 100) /12
+    #Output monthly loan amount
+    a = loan *(rate*(1+rate)**months)
+    b =((1+rate)**months -1)
+    monthlyPayment = a/b
+    print("Monthly Payment Amount: ", monthlyPayment)
+    #Output lifetime loan total
+    totalLoan = (months * monthlyPayment - loan) + loan
+    print("Total Amount Paid: ", totalLoan)
+    #Calculating total interest
+    totalInterest = months * monthlyPayment - loan
+    print("Lifetime Interest:", totalInterest)
+main()
